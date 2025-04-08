@@ -1,0 +1,114 @@
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    /* Уменьшение отступа для предотвращения переполнения */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 32px);
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100%;
+    /* Ширина изображения будет равна ширине карточки */
+    height: 200px;
+    /* Фиксированная высота для всех изображений */
+    object-fit: cover;
+    /* Обрезка изображения, чтобы оно заполнило контейнер */
+    border-radius: 8px;
+    /* Сохранение закругленных углов */
+    display: none;
+}
+
+.description {
+    opacity: 0;
+    /* Начальное состояние - невидимо */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* Плавный переход */
+    visibility: hidden;
+    /* Скрываем элемент, чтобы он не занимал место */
+}
+
+.description.visible {
+    opacity: 1;
+    /* Видимо */
+    visibility: visible;
+    /* Делаем элемент видимым */
+}
+
+.details-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.details-button:hover {
+    background-color: #218838;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    /* Центрируем элементы по вертикали */
+    margin: 10px 0;
+}
+
+.old-price {
+    font-size: 1.2em;
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.discount {
+    font-size: 1.2em;
+    color: #d9534f;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 1.5em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 calc(48% - 32px);
+        /* Две карточки в ряд на средних экранах */
+        min-width: 200px;
+        /* Устанавливаем минимальную ширину для средних экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        flex: 1 1 100%;
+        /* Одна карточка на маленьких экранах */
+        min-width: 150px;
+        /* Устанавливаем минимальную ширину для маленьких экранов */
+    }
+}

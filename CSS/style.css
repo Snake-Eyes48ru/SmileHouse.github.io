@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f4f4f4;
+    color: #007BFF;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #007BFF;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 1em;
+}
+
+h2 {
+    font-size: 2em; /* Размер шрифта */
+    color: #fff; /* Цвет текста заголовка (белый для контраста) */
+    text-align: left; /* Выровнять заголовок по левому краю */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    width: auto; /* Ширина заголовка 100% */
+    padding: 10px 20px; /* Внутренние отступы для улучшения восприятия */
+    background-color: #007BFF; /* Синий цвет фона заголовка */
+    border-radius: 5px; /* Закругленные углы (по желанию) */
+    font-weight: normal; /* Устанавливает обычный вес шрифта */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}

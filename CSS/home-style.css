@@ -1,0 +1,104 @@
+/* Стили для контейнера новостей */
+#home-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    grid-template-rows: auto auto; /* Две строки */
+    gap: 20px; /* Расстояние между статьями */
+    padding: 20px; /* Внутренний отступ */
+}
+
+/* Стили для каждой статьи */
+.news-article {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: stretch; /* Растягиваем элементы по ширине */
+    background-color: #ffffff; /* Цвет фона */
+    border: 1px solid #ddd; /* Цвет рамки */
+    border-radius: 12px; /* Скругление углов */
+    padding: 16px; /* Внутренний отступ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект при наведении */
+    position: relative; /* Для псевдоэлементов */
+    overflow: hidden; /* Скрыть переполнение */
+}
+
+/* Стили для последнего элемента, чтобы он занимал всю ширину */
+.news-article:last-child {
+    grid-column: auto; /* Занимает всю ширину контейнера */
+}
+
+.news-article:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+
+/* Стили для изображения */
+.news-image {
+    width: 100%; /* Ширина изображения */
+    max-height: 200px; /* Максимальная высота изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 8px; /* Скругление углов изображения */
+    object-fit: cover; /* Обрезка изображения, чтобы оно заполнило контейнер */
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+/* Стили для заголовка статьи */
+.news-article h3 {
+    margin: 10px 0; /* Отступы сверху и снизу */
+    color: #333; /* Цвет текста */
+    font-size: 1.5em; /* Размер шрифта заголовка */
+    position: relative; /* Для псевдоэлементов */
+}
+
+/* Линия под заголовком */
+.news-article h3::after {
+    content: '';
+    display: block;
+    width: 50px; /* Ширина линии */
+    height: 3px; /* Высота линии */
+    background-color: #007BFF; /* Цвет линии, чтобы совпадал с кнопками */
+    margin-top: 5px; /* Отступ сверху */
+}
+
+/* Стили для даты */
+.date {
+    font-size: 0.9em; /* Размер шрифта */
+    color: #777; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+/* Стили для кнопки */
+.read-more {
+    background-color: #007BFF; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px 15px; /* Внутренний отступ */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругление углов кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    width: fit-content; /* Ширина кнопки соответствует содержимому */
+    transition: background-color 0.3s, transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+    transform: translateY(-2px); /* Подъем кнопки при наведении */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    #home-container {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных устройствах */
+    }
+
+    .news-article {
+        padding: 12px; /* Уменьшение отступов */
+    }
+
+    .news-article h3 {
+        font-size: 1.3em; /* Уменьшение размера заголовка */
+    }
+
+    .read-more {
+        padding: 8px 12px; /* Уменьшение отступов кнопки */
+    }
+}
