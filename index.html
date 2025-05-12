@@ -9,18 +9,38 @@
     <link rel="stylesheet" href="CSS/services-style.css">
     <link rel="stylesheet" href="CSS/home-style.css">
     <link rel="stylesheet" href="CSS/aboutus-style.css">
+    <link rel="stylesheet" href="CSS/contact-info-style.css">
 </head>
 
 <body>
     <header>
-        <h1>Дом Улыбки</h1>
+        <div class="header-container">
+            <div class="header-title">
+                <h1>Стоматология "Дом Улыбки"</h1>
+            </div>
+            <div class="header-content">
+                <div class="header-info">
+                    <ul>
+                        <li>🌟 Опытные доктора</li>
+                        <li>🦷 Современное лечение</li>
+                        <li>✅ Гарантия результата</li>
+                    </ul>
+                </div>
+                <div class="header-logo">
+                    <img src="Images/logo.jpg" alt="Логотип" />
+                </div>
+            </div>
+        </div>
     </header>
+
+
     <nav>
         <ul>
             <li><a href="#home">Главная</a></li>
             <li><a href="#about_us">О нас</a></li>
             <li><a href="#services">Услуги</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#contact-info">Контакты</a></li>
+            <li><a href="#">Правовая информация</a></li>
         </ul>
     </nav>
     <main>
@@ -40,8 +60,16 @@
         </section>
     </main>
     <footer>
-        &copy; Контактная информация
+        <section id="contact-info">
+            <div class="contact-info">
+                <h3>Контактная информация</h3>
+                <p>Телефон: <a href="tel:+79507568404">+7 (950) 756-84-04</a></p>
+                <p>Электронная почта: <a href="mailto:domulybki48@example.com">@domulybki48</a></p>
+                <p>Адрес: <a href="#">Комсомольская 18, 2 этаж (здание Сбербанк), Усмань</a></p>
+            </div>
+        </section>
     </footer>
+
     <script type="module" src="Scripts/Home/Home.js"></script>
     <script type="module" src="Scripts/AboutUs/AboutUs.js"></script>
     <script type="module" src="Scripts/Services/Services.js"></script>
