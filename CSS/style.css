@@ -1,18 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
 header {
-    background-color: #f4f4f4;
-    color: #007BFF;
-    padding: 1em 0;
-    text-align: center;
+    background: linear-gradient(to right, #007BFF, #00BFFF); /* Градиент от синего к светло-синему */
+    color: #fff;
+    padding: 2em 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для шапки */
 }
 
+.header-container {
+    margin: 0 auto; /* Центрируем контейнер */
+    width: 90%; /* Занимаем всю ширину экрана */
+    padding: 0 20px; /* Добавляем немного внутреннего отступа, если нужно */
+}
 
+.header-title {
+    margin-bottom: 10px; /* Отступ снизу для заголовка */
+    text-align: center; /* Центрируем текст заголовка */
+    font-size: 1.5em; /* Уменьшенный размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.header-content {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Раздвигаем элементы по краям */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.header-info {
+    list-style: none; /* Убрать маркеры списка */
+    padding: 0; /* Убрать отступы */
+    margin: 0; /* Убираем отступы сверху и снизу */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+.header-info li {
+    margin: 5px 0; /* Отступы между пунктами списка */
+    font-size: 1.4em; /* Увеличенный размер шрифта для информации */
+}
+
+.header-logo {
+    margin-left: 20px; /* Отступ слева для логотипа */
+}
+
+.header-logo img {
+    max-width: 180px; /* Максимальная ширина логотипа */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 10px; /* Закругленные углы для логотипа */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для логотипа */
+}
 
 nav ul {
     list-style-type: none;
@@ -58,11 +98,10 @@ html {
 }
 
 footer {
-    background-color: #007BFF;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    width: 100%;
-    margin-top: 20px;
+    background-color: #007BFF; /* Цвет фона футера */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 2em 0; /* Внутренние отступы */
+    position: relative; /* Относительное позиционирование */
+    margin-top: 20px; /* Отступ сверху */
 }
